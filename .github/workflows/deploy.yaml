@@ -19,16 +19,6 @@ jobs:
         with:
           go-version: 1.24.2
 
-      - name: Cache Go modules
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.cache/go-build
-            ~/go/pkg/mod
-          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
-          restore-keys: |
-              ${{ runner.os }}-go-
-        
       - name: Verify and tidy dependencies
         run: |
             go mod tidy
@@ -64,9 +54,7 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/health-app:latest
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-      
+
   deploy:
     name: Deploy
     runs-on: ubuntu-latest

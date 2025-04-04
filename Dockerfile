@@ -2,7 +2,6 @@ FROM golang:1.24.2-alpine3.21 AS builder
 WORKDIR /build
 COPY . .
 RUN go mod download
-# RUN go build -o ./health-api
 RUN go build -ldflags="-s -w" -o ./health-api
 
 

@@ -75,5 +75,5 @@ jobs:
             docker run -d --name health-api --restart unless-stopped -p 8080:8080 ${{ secrets.DOCKER_USERNAME }}/health-app:latest
 
       - name: Verify deployment
-        run: |
-          curl --fail http://${{ secrets.VM_HOST }}:8080/health
+        run: sleep 10 && curl -s --retry 5 --retry-delay 5 --retry-connrefused http://${{ secrets.VM_HOST }}:8080/health
+

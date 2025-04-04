@@ -16,7 +16,7 @@ func main() {
             "nrp":       "5025231021",
             "status":    "UP",
             "timestamp": time.Now().Format(time.RFC3339),
-            "uptime":    time.Since(startTime).Seconds(),
+            "uptime":    time.Since(startTime).String(),
         })
     })
     router.Run("0.0.0.0:8080")

@@ -1,0 +1,8 @@
+.git
+.github
+*.md
+*.log
+*.test
+*.env
+Dockerfile
+deploy.yaml

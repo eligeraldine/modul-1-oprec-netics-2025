@@ -24,12 +24,8 @@ jobs:
             go mod tidy
             go mod verify
       
-      #Bisa ditambahkan jika ada test
-      #- name: Run tests
-      #  run: go test -v ./...
-
-      #- name: Build application
-      #  run: go build -v -o health-api
+      - name: Run tests
+        run: go test -v ./...
 
   build-and-push-image:
     name: Build and Push Docker Image

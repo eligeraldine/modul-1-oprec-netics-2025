@@ -23,12 +23,13 @@ jobs:
         run: |
             go mod tidy
             go mod verify
-        
-      - name: Run tests
-        run: go test -v ./...
+      
+      #Bisa ditambahkan jika ada test
+      #- name: Run tests
+      #  run: go test -v ./...
 
-      - name: Build application
-        run: go build -v -o health-api
+      #- name: Build application
+      #  run: go build -v -o health-api
 
   build-and-push-image:
     name: Build and Push Docker Image
@@ -62,7 +63,7 @@ jobs:
 
     steps:
       - name: Deploy to Server (SSH)
-        uses: appleboy/ssh-action@v1.0.0
+        uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.VM_HOST }}
           username: ${{ secrets.VM_USER }}

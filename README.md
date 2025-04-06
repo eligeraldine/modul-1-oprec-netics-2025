@@ -4,6 +4,14 @@
 
 </div>
 
+## Identitas
+Nama: Rouli Elizabeth Geraldine Aritonang  
+NRP: 5025231021  
+Docker Image: [Link Docker Image on Docker Hub](https://hub.docker.com/r/eligeraldinee/health-app)  
+URL API: [Link Public API](http://13.75.95.111:8080/health) 
+
+## Penjelasan Kode
+
 #### `main.go`
 ```c
 package main
@@ -34,7 +42,7 @@ Penjelasan:
 1. Kode diatas merupakan kode Go kamu yang membuat API dengan endpoint `/health`. Pada file Go ini digunakan framework Gin Gonic.
 2. Framework Gin Gonic digunakan agar lebih minimalis dan cepat
 3. Variabel `startTime` digunakan untuk menyimpan timestamp saat server dijalankan.
-4. Kode Go ini akan menjalankan server Gin pada `IP 0.0.0.0` port `8080`. 0.0.0.0 agar server bisa diakses dari alamat IP manapun, cocok untuk container/VPS.
+4. Kode Go ini akan menjalankan server Gin pada `IP 0.0.0.0` port `8080`. 0.0.0.0 agar server bisa diakses dari alamat IP manapun, cocok untuk container/VPS.  
 
 #### `Dockerfile`
 ```c
@@ -151,3 +159,24 @@ Penjelasan:
 2. Job ini berjalan jika dan hanya jika `build-and-push-image` (job sebelumnya) sukses dijalankan.
 3. Step `Deploy to Server` digunakan untuk login ke server VPS menggunakan SSH. Kita perlu memasukkan 3 kredential yaitu `VM_HOST` atau IP VPS publik, `VM_USER`, serta `VM_SSH_KEY`.
 4. Step `Verify Deployment` digunakan untuk mengecek apakah API berhasil dideploy dan sudah bisa berjalan. Hal ini dilakukan dengan send request ke endpoint `/health`.
+
+## Best Practices
+1. 
+
+## Dokumentasi hasil
+
+#### API ENDPOINT /HEALTH
+
+#### GITHUB ACTIONS
+![Screenshot 2025-04-06 163414](https://github.com/user-attachments/assets/82954cd6-c7d6-43ae-88ad-0e97fdaf1673)
+
+![image](https://github.com/user-attachments/assets/68d579f6-210e-4667-89a3-d0cec3c8a79d)
+
+![Screenshot 2025-04-06 163710](https://github.com/user-attachments/assets/f1cc3b78-0fa8-4db1-af29-8dc61392ed44)
+
+![image](https://github.com/user-attachments/assets/aa7f65f3-987a-497f-aeba-44b16b45cf70)
+
+#### DOCKER HUB
+![image](https://github.com/user-attachments/assets/9ffd247d-db16-4287-a044-53cd4e583aba)
+
+

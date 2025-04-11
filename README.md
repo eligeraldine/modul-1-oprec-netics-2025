@@ -26,7 +26,7 @@
 - **Nama:** Rouli Elizabeth Geraldine Aritonang  
 - **NRP:** 5025231021  
 - **Docker Image:** [Link Docker Image on Docker Hub](https://hub.docker.com/r/eligeraldinee/health-app)  
-- **URL API:** [Link Public API](http://13.75.95.111:8080/health) <br> <br>
+- **URL API:** [Link Public API](http://13.75.95.111:8080/health) --> url api tidak dapat diakses untuk saat ini karena VM distop untuk alasan efisiensi credit <br> <br>
 
 ## Overview
 Repository ini merupakan implementasi modul CI/CD sederhana menggunakan GitHub Actions, Docker, dan VPS publik berbasis Azure Virtual Machine. Pada tugas ini, proyek akan membangun API publik dengan endpoint `/health` yang menyajikan beberapa informasi. API dibuat menggunakan bahasa pemrograman Go dengan framework Gin. Setelah itu API akan dijadikan sebuah image Docker menggunakan teknik multi-stage build agar ukuran image menjadi minimal dan efisien. Proses build, push, dan deployment dijalankan secara otomatis melalui CI/CD pipeline pada GitHub Actions dan server Azure melalui koneksi SSH. Source code telah dibuat seefisien mungkin dengan menerapkan beberapa bestt practices pada proses CI/CD. <br> <br>
